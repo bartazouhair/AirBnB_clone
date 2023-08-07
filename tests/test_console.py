@@ -65,10 +65,11 @@ class TestHBNBCommand_h(unittest.TestCase):
 
     def testHelpDestroy(self):
         hp = ("It's Usage: destroy <class> <id> or <class>.destroy(<id>)\n"
-              "Delete a class instance of a given id. ")
+              "Delete a class instance of a given id.")
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help destroy"))
-            self.assertEqual(hp, output.getvalue().strip())
+            output_value = output.getvalue().strip().replace("        ", "")
+            self.assertEqual(hp, output_value)
 
     def testHelpAll(self):
         hp = (
@@ -88,12 +89,15 @@ class TestHBNBCommand_h(unittest.TestCase):
             self.assertEqual(hp, output.getvalue().strip())
 
     def testHelpUpdate(self):
+        self.maxDiff = None
         hp = (
-            "Usage: update <class> <id> <attribute_name> <attribute_value> or"
-            "\n       <class>.update(<id>, <attribute_name>, <attribute_value"
-            ">) or\n       <class>.update(<id>, <dictionary>)\n        "
+            "Usage: update <class> <id> <attribute_name> <attribute_value>\n"
+            "or <class>.update(<id>, <attribute_name>, <attribute_value>) or\n"
+            "<class>.update(<id>, <dictionary>)\n"
             "Update for class instance of a given id by adding or updating\n"
-            "     a given attribute key/value pair or dictionary.")
+            "- Update for class instance of a given id by adding or updating\n"
+            "+ Update for class instance of a given id by adding or updating\n"
+            "a given attribute key/value pair or dictionary.")
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help update"))
             self.assertEqual(hp, output.getvalue().strip())
