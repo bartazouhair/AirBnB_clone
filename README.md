@@ -348,7 +348,7 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
 ## Authors
 
 <details>
-    <summary>Zouhair BARTA</summary>
+    <summary>Zouhair Barta</summary>
     <ul>
     <li><a href="https://github.com/bartazouhair">Github</a></li>
     <li><a href="https://www.linkedin.com/in/zouhair-barta/">LinkedIn</a></li>
@@ -356,7 +356,7 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
     </ul>
 </details>
 <details>
-    <summary>Hicham EL MAATAOUI</summary>
+    <summary>Hicham EL Maataoui</summary>
     <ul>
     <li><a href="https://github.com/HichamELMaa">Github</a></li>
     </ul>
