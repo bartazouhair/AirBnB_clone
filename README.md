@@ -351,7 +351,7 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
     <summary>Zouhair BARTA</summary>
     <ul>
     <li><a href="https://github.com/bartazouhair">Github</a></li>
-    <li><a href="ttps://www.linkedin.com/in/zouhair-barta/">LinkedIn</a></li>h
+    <li><a href="https://www.linkedin.com/in/zouhair-barta/">LinkedIn</a></li>
     <li><a href="https://twitter.com/BartaZouhair">Twitter</a></li>
     </ul>
 </details>
