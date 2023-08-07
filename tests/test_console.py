@@ -19,6 +19,7 @@ from models.engine.file_storage import FileStorage
 from console import HBNBCommand
 from io import StringIO
 from unittest.mock import patch
+import textwrap
 
 
 class TestHBNBCommand_p(unittest.TestCase):
@@ -95,12 +96,13 @@ class TestHBNBCommand_h(unittest.TestCase):
             "or <class>.update(<id>, <attribute_name>, <attribute_value>) or\n"
             "<class>.update(<id>, <dictionary>)\n"
             "Update for class instance of a given id by adding or updating\n"
-            "- Update for class instance of a given id by adding or updating\n"
-            "+ Update for class instance of a given id by adding or updating\n"
-            "a given attribute key/value pair or dictionary.")
+            "a given attribute key/value pair or dictionary."
+        )
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help update"))
-            self.assertEqual(hp, output.getvalue().strip())
+            output_value = output.getvalue().strip()
+            wrapped_output_value = textwrap.fill(output_value, width=80)
+            self.assertEqual(hp, wrapped_output_value)
 
     def test_help(self):
         hp = ("Documented commands (type help <topic>):\n"
