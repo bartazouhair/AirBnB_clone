@@ -359,5 +359,6 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
     <summary>Hicham EL Maataoui</summary>
     <ul>
     <li><a href="https://github.com/HichamELMaa">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/hichammaa/">LinkedIn</a></li>
     </ul>
 </details>
