@@ -49,7 +49,7 @@ class HBNBCommand(cmd.Cmd):
         "Review"
     }
 
-    def lnempty(self):
+    def emptyline(self):
         """It's Do nothing upon receiving an empty line."""
         pass
 
