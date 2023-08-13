@@ -14,6 +14,7 @@ from models.review import Review
 
 
 def prs(arg):
+    """ parssing function to parse something """
     cb = re.search(r"\{(.*?)\}", arg)
     bk = re.search(r"\[(.*?)\]", arg)
     if cb is None:
